@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "TT Commons";
+    src: url("fonts/TTCommons-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Commons";
+    src: url("fonts/TTCommons-Bold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Commons";
+    src: url("fonts/TTCommons-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("fonts/RobotoMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Caveat Regular";
+    src: url("fonts/Caveat-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: local('../fonts/TT Firs Neue/TT Firs Neue Medium'), local('../fonts/TT Firs Neue/TT-Firs-Neue-Medium'),
+        url('../fonts/TT Firs Neue/TTFirsNeue-Medium.woff2') format('woff2'),
+        url('../fonts/TT Firs Neue/TTFirsNeue-Medium.woff') format('woff'),
+        url('../fonts/TT Firs Neue/TTFirsNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Semibold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato/Lato-Black.ttf') format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
