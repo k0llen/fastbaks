@@ -1,0 +1,11 @@
+.content {
+    width: calc(100% - 365px);
+    position: relative;
+    overflow: auto;
+
+    .text {
+        width: calc(100% - 482px);
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+}

@@ -1,0 +1,129 @@
+.promo {
+    padding: 36px 28px 61px 29px;
+    width: 438px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px #E7E8EE;
+    border-radius: 20px;
+    position: absolute;
+    top: 105px;
+    right: 44px;
+
+    h2 {
+        margin-bottom: 28px;
+        color: #232392;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+
+        +p {
+            color: #13A72B;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+
+
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 143px;
+        background: #F6F7FC;
+        border-radius: 20px;
+
+        p {
+            height: 48px;
+        }
+
+        &-pic-block {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_1 {
+
+            .promo-card-pic-block {
+                width: 50px;
+                height: 50px;
+
+                +p {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        &_2 {
+
+            .promo-card-pic-block {
+                width: 70px;
+                height: 70px;
+
+                +p {
+                    
+                }
+            }
+        }
+
+        &_3 {
+
+            .promo-card-pic-block {
+                width: 51px;
+                height: 51px;
+
+                +p {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &_4 {
+
+            .promo-card-pic-block {
+                width: 42px;
+                height: 42px;
+
+                +p {
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        &_5 {
+
+            .promo-card-pic-block {
+                width: 57px;
+                height: 57px;
+
+                +p {
+                    margin-top: 9px;
+                }
+            }
+        }
+
+        &_6 {
+
+            .promo-card-pic-block {
+                width: 45px;
+                height: 45px;
+
+                +p {
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+}
