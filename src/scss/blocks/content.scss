@@ -2,10 +2,52 @@
     width: calc(100% - 365px);
     position: relative;
     overflow: auto;
+    height: 100vh;
+    padding-bottom: 183px;
+    padding-right: 40px;
+
+    &__top {
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 21px;
+
+        h3 {
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 29px;
+            color: #B9B9B9;
+        }
+
+        &-place {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+    }
 
     .text {
         width: calc(100% - 482px);
         padding-left: 38px;
-        padding-right: 38px;
     }
+
+    .step-bullet {
+        width: 19px;
+        height: 19px;
+        background: #B8B8B8;
+        border-radius: 20px;
+        transition: .3s all;
+
+        &s {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-height:849px) {
+    .content {}
 }

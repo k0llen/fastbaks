@@ -40,5 +40,14 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        transition: .3s all;
+        border: 1px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            background: #FFFFFF;
+            border-color: #F6F7FC;
+            box-shadow: 0px 5px 20px #E7E8EE;
+        }
     }
 }
