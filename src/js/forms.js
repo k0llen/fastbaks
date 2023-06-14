@@ -12,6 +12,7 @@ if (document.querySelector('.forms')) {
     chooseCard.forEach((e) => {
         e.addEventListener('click', () => {
             contentWrapper.classList.add('forms--active');
+            formsWrapper.classList.add('step-1');
         });
     });
 
