@@ -127,3 +127,21 @@
         }
     }
 }
+
+@media screen and (max-width: 1380px) {
+    .promo {
+        right: 15px;
+        width: 400px;
+        padding: 26px 18px 51px 19px;
+
+        &-cards {
+            gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .promo {
+        display: none;
+    }
+}

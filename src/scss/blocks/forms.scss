@@ -69,25 +69,44 @@
                     -webkit-appearance: none;
                     -moz-appearance: none;
                     appearance: none;
+                    border: none;
+                    box-shadow: none;
+                    border-radius: none;
 
-                    &::-webkit-slider-runnable-track {
-                        border-radius: 20px;
-                        height: 11px;
-                        border: none;
-                        background-color: #13A72B;
-                    }
-
-                    &::-webkit-slider-thumb {
+                    .noUi-handle {
                         background: #FFFFFF;
                         border: 3px solid #13A72B;
+                        box-shadow: none;
                         border-radius: 50%;
                         cursor: pointer;
                         width: 20px;
                         height: 20px;
-                        -webkit-appearance: none;
-                        margin-top: -4px;
+                        transition: .3s all;
+
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
                     }
+
+                    .noUi-active.noUi-handle {
+                        background: #13A72B;
+                    }
+
+                    .noUi-connect {
+                        background: #13A72B;
+                    }
+
+                    .noUi-connects {
+                        border-radius: 20px;
+                        height: 11px;
+                        border: none;
+                        background-color: #DDDDDD;
+                    }
+                    
                 }
+
+                
             }
 
             &-bottom {
@@ -268,10 +287,20 @@
 
             &-btn {
                 width: 100%;
-            }
-            
-            &-btn.active {
-                background: #13A72B ;
+                position: relative;
+                z-index: 2;
+
+                .form_3-self-radio-hidden {
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: -1;
+    
+                    &:checked + p {
+                        background: #13A72B;
+                    }
+                }
             }
         }
     }
@@ -397,6 +426,7 @@
     width: 100%;
     max-width: 439px;
     padding-left: 30px;
+    margin: 0 auto;
 }
 
 .forms.step-1 {
@@ -491,4 +521,14 @@
     .forms {
         display: block;
     }
+}
+
+@media screen and (max-width: 1380px) {
+    .forms {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    
 }

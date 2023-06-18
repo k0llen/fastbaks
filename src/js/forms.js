@@ -3,16 +3,21 @@ if (document.querySelector('.forms')) {
     // forms steps
 
     const formsWrapper = document.querySelector('.forms');
+    const contentTop = document.querySelector('.content__top');
     const form1btn = document.querySelector('.form_1-btn');
     const form2btn = document.querySelector('.form_2-btn');
     const form3btn = document.querySelector('.form_3-btn');
     const contentWrapper = document.querySelector('.content-tab');
     const chooseCard = document.querySelectorAll('.choose__card');
+    const bullet1 = document.querySelector('.step-bullet-1');
+    const bullet2 = document.querySelector('.step-bullet-2');
+    const bullet3 = document.querySelector('.step-bullet-3');
 
     chooseCard.forEach((e) => {
         e.addEventListener('click', () => {
             contentWrapper.classList.add('forms--active');
             formsWrapper.classList.add('step-1');
+            contentTop.classList.add('active');
         });
     });
 
@@ -34,13 +39,32 @@ if (document.querySelector('.forms')) {
         formsWrapper.classList.add('form--sent');
     });
 
+    bullet1.addEventListener('click', (e) => {
+        formsWrapper.classList.add('step-1');
+        formsWrapper.classList.remove('step-2');
+        formsWrapper.classList.remove('step-3');
+    });
+
+    bullet2.addEventListener('click', (e) => {
+        formsWrapper.classList.remove('step-1');
+        formsWrapper.classList.add('step-2');
+        formsWrapper.classList.remove('step-3');
+    });
+
+    bullet3.addEventListener('click', (e) => {
+        formsWrapper.classList.remove('step-1');
+        formsWrapper.classList.remove('step-2');
+        formsWrapper.classList.add('step-3');
+    });
+
     // form 2 calculation
 
     const formCard = document.querySelectorAll('.form_2-card');
     const counterInput = document.querySelector('.form_2-counter-top-input');
-    const counterRange = document.querySelector('.form_2-counter-top-range');
+    const counterRange = document.querySelector('#form_2-counter-top-range');
     const counterMonthly = document.querySelector('.form_2-counter-monthly');
-    let currentMonthCount = 1;
+    var currentMonthCount = 1;
+    var counterFormula = (counterInput.value / currentMonthCount) * 1.05;
 
     // adding active class to cards list
 
@@ -48,29 +72,38 @@ if (document.querySelector('.forms')) {
 
         card.addEventListener('click', (e) => {
             currentMonthCount = card.dataset.value;
-            let counterFormula = (counterRange.value / currentMonthCount) * 1.05;
 
             formCard.forEach((child) => {
                 child.classList.remove('active');
             });
+
             card.classList.add('active');
-            counterMonthly.innerHTML = '~ ' + Math.round(counterFormula) + ' ₸*';
+            counterMonthly.innerHTML = '~ ' + (Math.round((counterInput.value * 1.05) / currentMonthCount)) + ' ₸*';
         });
     });
 
     //input value change
 
-    counterRange.addEventListener('change', (e) => {
-        let counterFormula = (counterRange.value / currentMonthCount) * 1.05;
+    // input slider
 
-        counterInput.value = counterRange.value;
-        counterMonthly.innerHTML = '~ ' + Math.round(counterFormula) + ' ₸*';
+    noUiSlider.create(counterRange, {
+        start: [20000],
+        connect: 'lower',
+        step: 1000,
+        range: {
+            'min': 10000,
+            'max': 7000000
+        }
+    });
+
+    counterRange.noUiSlider.on('update', function (values) {
+        counterInput.value = Math.round(values);
+        counterMonthly.innerHTML = '~ ' + ((Math.round(values) * 1.05) / currentMonthCount) + ' ₸*';
     });
 
     counterInput.addEventListener('change', (e) => {
-        counterRange.value = counterInput.value;
-        let counterFormula = (counterRange.value / currentMonthCount) * 1.05;
-        counterMonthly.innerHTML = '~ ' + Math.round(counterFormula) + ' ₸*';
+        counterRange.noUiSlider.set(counterInput.value);
+        counterMonthly.innerHTML = '~ ' + (Math.round((counterInput.value * 1.05) / currentMonthCount)) + ' ₸*';
     });
 
     // Dropdowns 
@@ -119,23 +152,12 @@ if (document.querySelector('.forms')) {
                 formWrapper.classList.remove('form__dropdown--active');
             }
         });
-
-        // Yes\no buttons
-
-        const form3SelfBtns = document.querySelectorAll('.form_3-self-btn');
-
-        form3SelfBtns.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                form3SelfBtns.forEach((child) => {
-                    child.classList.remove('active');
-                })
-
-                btn.classList.add('active');
-            });
-        });
-
-
     });
 
+    // masked input 
+
+    jQuery(function ($) {
+        $("#form-input-phone").mask("+7 (999) 999-9999");
+    });
 
 }
