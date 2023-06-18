@@ -290,6 +290,10 @@
                 position: relative;
                 z-index: 2;
 
+                p{
+                    padding: 11px 20px;
+                }
+
                 .form_3-self-radio-hidden {
                     width: 0;
                     height: 0;
@@ -529,6 +533,13 @@
     }
 }
 
-@media screen and (max-width: 1010px) {
-    
+@media screen and (max-width: 332px) {
+    .form {
+
+        &_2 {
+            &-card {
+                padding: 11px;
+            }
+        }
+    }
 }
