@@ -365,8 +365,7 @@
 @media screen and (max-width: 520px) {
     .nav {
         position: fixed;
-        overflow-y: scroll !important;
-        overflow-x: visible !important;
+        overflow: visible !important;
         height: 100%;
         width: 0;
 
@@ -380,6 +379,7 @@
             max-width: none;
             display: block;
             height: fit-content;
+            padding: 28px 36px 34px 22px;
 
             .top {
 
@@ -428,6 +428,7 @@
             height: 100% !important;
             transform: translateX(-100%);
             transition: .3s all;
+            overflow: hidden;
         }
 
         .burger {
@@ -437,15 +438,13 @@
             width: 25px;
             height: 25px;
             background: #FFFFFF;
-/*             border-radius: 3px;
-            padding: 5px;
-            box-sizing: content-box; */
 
-/*             &::before,
+            
+            &::before,
             &::after,
             span {
                 width: calc(100% - 10px);
-            } */
+            }
 
             span {
                 top: 0px;
@@ -469,6 +468,7 @@
 
         .nav__content {
             transform: translateX(0);
+            overflow: scroll;
         }
 
         .burger {
