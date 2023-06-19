@@ -439,11 +439,10 @@
             height: 25px;
             background: #FFFFFF;
 
-            
+
             &::before,
             &::after,
             span {
-                width: calc(100% - 10px);
             }
 
             span {
