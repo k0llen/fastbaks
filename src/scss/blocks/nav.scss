@@ -184,6 +184,7 @@
 
                 .link {
                     text-decoration: none;
+
                     svg {
                         fill: #A3A6B5;
                         transition: .3s all;
@@ -432,29 +433,30 @@
         .burger {
             position: fixed;
             left: 20px;
+            right: auto;
             width: 25px;
             height: 25px;
             background: #FFFFFF;
-            border-radius: 3px;
+/*             border-radius: 3px;
             padding: 5px;
-            box-sizing: content-box;
+            box-sizing: content-box; */
 
-            &::before,
+/*             &::before,
             &::after,
             span {
                 width: calc(100% - 10px);
-            }
+            } */
 
             span {
-                top: 17px;
+                top: 0px;
             }
 
             &::before {
-                top: 8px;
+                top: 11px;
             }
 
             &::after {
-                bottom: 8px;
+                bottom: 1px;
             }
         }
     }
@@ -475,11 +477,11 @@
             right: 40px;
 
             &::before {
-                top: 16px;
+                top: 11px;
             }
 
             &::after {
-                bottom: 16px;
+                bottom: 12px;
             }
         }
     }
