@@ -364,7 +364,8 @@
 @media screen and (max-width: 520px) {
     .nav {
         position: fixed;
-        overflow: scroll !important;
+        overflow-y: scroll !important;
+        overflow-x: visible !important;
         height: 100%;
         width: 0;
 
