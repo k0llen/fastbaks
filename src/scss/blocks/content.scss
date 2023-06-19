@@ -9,13 +9,10 @@
 
     &__top {
         padding-top: 32px;
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: flex-end;
         margin-left: 21px;
-        opacity: 0;
-        visibility: hidden;
-        overflow: hidden;
 
         h3 {
             font-weight: 900;
@@ -99,9 +96,7 @@
     }
 
     &__top.active {
-        opacity: 1;
-        visibility: visible;
-        overflow: visible;
+        display: flex;
     }
 
     .text {

@@ -60,7 +60,11 @@
 
 @media screen and (max-width: 1010px) {
     .choose {
-        padding-top: 0;
+
+        h3 + p {
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
     }
 }
 
