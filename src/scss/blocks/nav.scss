@@ -434,25 +434,27 @@
             left: 20px;
             width: 25px;
             height: 25px;
+            background: #FFFFFF;
             border-radius: 3px;
-            padding: 2px;
+            padding: 5px;
+            box-sizing: content-box;
 
             &::before,
             &::after,
             span {
-                width: 21px;
+                width: calc(100% - 10px);
             }
 
             span {
-                top: 11px;
+                top: 17px;
             }
 
             &::before {
-                top: 3px;
+                top: 8px;
             }
 
             &::after {
-                bottom: 3px;
+                bottom: 8px;
             }
         }
     }
@@ -473,11 +475,11 @@
             right: 40px;
 
             &::before {
-                top: 11px;
+                top: 16px;
             }
 
             &::after {
-                bottom: 12px;
+                bottom: 16px;
             }
         }
     }
